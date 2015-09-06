@@ -25,6 +25,11 @@ If `godoctor` is not already installed and in your `$PATH`, just type
 to be in your `$PATH`, which assumes you have `$GOPATH` set.
 `git` must be installed for `:GoDoctorInstall` to work.
 
+We took express care not to conflict with anything in
+<https://github.com/fatih/vim-go>. This means (`vim-go` note aside) that it is
+safe to have `vim-go` installed alongside `godoctor.vim`. Notably, vim-go has `:GoRename`
+and `:GoRefactor` where we have `:Rename` and `:Refactor` when editing a `.go` file.
+
 ## Getting started
 
 With cursor in thing to rename:
