@@ -4,17 +4,6 @@
 
 " Vim integration for the Go Doctor.
 
-" To use, add these lines to ~/.vimrc:
-"
-"     if exists("g:did_load_filetypes")
-"       filetype off
-"       filetype plugin indent off
-"     endif
-"     " IMPORTANT: REPLACE THE FOLLOWING LINE WITH THE PATH ON YOUR MACHINE
-"     set rtp+=/path/to/golang-refactoring.org/go-doctor/cmd/godoctor/vim
-"     filetype plugin indent on
-"     syntax on
-
 " TODO: If a refactoring only affects a single file, allow unsaved buffers
 " and pipe the current buffer's contents into the godoctor via stdin
 " (n.b. the quickfix list needs to be given a real filename to point to

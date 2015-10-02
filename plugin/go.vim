@@ -44,7 +44,7 @@ function! s:GoDoctorInstall()
         let cmd .= "-f " 
     endif
 
-    let pkg = "github.com/godoctor/godoctor/cmd/godoctor"
+    let pkg = "github.com/godoctor/godoctor"
 
     let out = system(cmd . shellescape(pkg))
     if v:shell_error

@@ -1,6 +1,7 @@
 # godoctor.vim
 
-vim plugin for the [godoctor](https://github.com/godoctor/godoctor)
+Vim plugin for the [godoctor](https://github.com/godoctor/godoctor).
+Tested with vim 7.3 and 7.4.
 
 ## Install
 
@@ -18,7 +19,14 @@ indent on` must also be set (add this to your `~/.vimrc`).
   * `Plugin 'godoctor/godoctor.vim'`
 * manual
   * `git clone https://github.com/godoctor/godoctor.vim ~/.vim/godoctor.vim`
-  * `echo 'set rtp+=~/.vim/godoctor.vim' >> ~/.vimrc`
+  * Add these lines to ~/.vimrc
+```if exists("g:did_load_filetypes")
+  filetype off
+  filetype plugin indent off
+endif
+set rtp+=~/.vim/godoctor.vim
+filetype plugin indent on
+syntax on```
 
 If `godoctor` is not already installed and in your `$PATH`, just type
 `:GoDoctorInstall`. This will install it to `$GOPATH/bin`, which will also need
