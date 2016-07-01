@@ -20,6 +20,7 @@ indent on` must also be set (add this to your `~/.vimrc`).
 * manual
   * `git clone https://github.com/godoctor/godoctor.vim ~/.vim/godoctor.vim`
   * Add these lines to ~/.vimrc
+
     ```
     if exists("g:did_load_filetypes")
       filetype off
