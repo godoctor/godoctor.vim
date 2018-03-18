@@ -329,9 +329,14 @@ func! s:RunDoctor(selected, refac, ...) range abort
     endif
   endfor
 
-  if !exists("g:doctor_scope")
-    let s:scope = ""
-  else
+  let s:scope = ""
+
+  " set scope from func, if exists. allow hard g:doctor_scope to override
+  if exists("*DoctorScopeFunc")
+    let s:scope = " -scope=".shellescape(DoctorScopeFunc())
+  endif
+
+  if exists("g:doctor_scope")
     let s:scope = " -scope=".shellescape(g:doctor_scope)
   endif
 
