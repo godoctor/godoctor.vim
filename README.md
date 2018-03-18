@@ -60,6 +60,10 @@ refactoring, you may do the following:
 Add the following to your `.vimrc`:
 
 ```viml
+function! s:find_git_root()
+  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+endfunction
+
 function! DoctorScopeFunc()
   let l:gp = $GOPATH
   if l:gp == ""
